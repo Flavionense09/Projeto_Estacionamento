@@ -1,7 +1,9 @@
 -- Sistema de Gerenciamento de Estacionamento Rotativo : 
 
-nome: David Lucas Sá Cordeiro<br>
+nome: DAVID LUCAS SÁ CORDEIRO<br>
 matricula: 2023030470<br>
+nome: FLAVIO ARAGAO TENORIO DE BRITTO<br>
+matricula: 2023041680<br>
 
 
 -- Descrição do problema: 
@@ -56,3 +58,5 @@ SAIDA:
 - informar status do pagamento
 - encerrar sistema 
 
+
+-- variave
