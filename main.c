@@ -40,7 +40,7 @@ inicio:
 
     /* Verifica se tem exatamente 7 caracteres */
     if (len != 7) {
-        printf("Número da placa errado, por favor tente novamente\n\n");
+        printf("Numero da placa errado, por favor tente novamente\n\n");
         goto inicio;
     }
 
@@ -49,13 +49,14 @@ inicio:
         int i;
         for (i = 0; i < 7; i++) {
             if (!isalnum((unsigned char)placa[i])) {
-                printf("Número da placa errado, por favor tente novamente\n\n");
+                printf("Numero da placa errado, por favor tente novamente\n\n");
                 goto inicio;
             }
         }
     }
 
     /* Entrada do tipo do veículo (switch-case) */
+escolha:
     printf("Tipo do veiculo (digite o numero):\n");
     printf("1 - Carro\n");
     printf("2 - Moto\n");
@@ -66,7 +67,7 @@ inicio:
         int ch;
         do { ch = getchar(); } while (ch != '\n' && ch != EOF);
         printf("Tipo invalido. Encerrando.\n");
-        return 0;
+        goto escolha;
     }
 
     /* limpar o newline remanescente antes de próximas leituras */
@@ -90,7 +91,7 @@ inicio:
             break;
         default:
             printf("Tipo invalido. Encerrando.\n");
-            return 0;
+            goto escolha;
     }
 
     /* Entrada do tempo de permanência */
