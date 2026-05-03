@@ -1,4 +1,4 @@
--- Sistema de Gerenciamento de Estacionamento Rotativo : 
+## Sistema de Gerenciamento de Estacionamento Rotativo : 
 
 nome: DAVID LUCAS SÁ CORDEIRO<br>
 matricula: 2023030470<br>
@@ -6,12 +6,12 @@ nome: FLAVIO ARAGAO TENORIO DE BRITTO<br>
 matricula: 2023041680<br>
 
 
--- Descrição do problema: 
+## Descrição do problema: 
 
-1 - Como funciona um estacionamento rotativo na vida real:<br>
+## 1 - Como funciona um estacionamento rotativo na vida real:<br>
 	 O estacionamento rotativo, conhecido como "Zona Azul", foi implementado com o intuito de melhorar o tráfego e aumentar a disponibilidade de vagas nas ruas, permitindo que as pessoas estacionem próximo aos seus destinos mediante regras específicas. O sistema visa assegurar que um número maior de cidadãos utilize as vagas disponíveis, promovendo um fluxo contínuo de veículos. Embora seja mais comum em áreas comerciais, sua aplicação pode se estender a outros locais. A regulamentação e as características do estacionamento rotativo podem ser determinadas individualmente por cada município brasileiro.
 
-2 - Quais decisões o sistema precisa tomar:<br>
+## 2 - Quais decisões o sistema precisa tomar:<br>
 
 - validação dos dados de entrada
 - calculo do tempo de permanência 
@@ -22,11 +22,10 @@ matricula: 2023041680<br>
 - forma e confirmação de pagamento 
 - tarifas especiais por tempo ou tipo de veiculo 
 
-
---  Explicação da lógica:<br>
+##  Explicação da lógica:<br>
 	O sistema de gerenciamento de estacionamento rotativo visa controlar a entrada e saída de veículos, calcular o tempo de permanência e determinar o valor a ser pago conforme regras pré-definidas. Ele opera através de uma sequência de etapas para garantir um funcionamento correto e organizado.
 
-1 - Funcionamento:<br>
+## 1 - Funcionamento:<br>
 
 ENTRADAS :<br>
 - Ler placa do veiculo <br>
@@ -59,4 +58,42 @@ SAIDA:
 - encerrar sistema 
 
 
--- variave
+##  Variáveis utilizadas
+
+O programa utiliza as seguintes variáveis para armazenar e processar as informações do sistema de estacionamento:
+
+| Variável        | Tipo        | Descrição |
+|----------------|------------|----------|
+| placa          | char[100]  | Armazena a placa do veículo digitada pelo usuário 
+| tipo           | int        | Tipo do veículo (1 = carro, 2 = moto, 3 = caminhonete) 
+| horas          | double     | Tempo de permanência informado pelo usuário 
+| preco_hora     | double     | Valor cobrado por hora de acordo com o tipo do veículo 
+| horas_cobradas | double     | Tempo considerado para cobrança (mínimo de 1 hora) 
+| valor_base     | double     | Valor inicial calculado antes de descontos e multas 
+| desconto       | double     | Valor de desconto aplicado (10% para permanência acima de 5 horas) 
+| multa          | double     | Taxa adicional aplicada (R$20 para permanência acima de 10 horas) 
+| valor_final    | double     | Valor total a ser pago após todos os cálculos 
+| tipo_texto     | char[20]   | Armazena o nome do tipo do veículo em formato texto 
+| p              | char*      | Ponteiro utilizado para localizar e remover o caractere de nova linha da placa 
+| len            | size_t     | Armazena o tamanho da string da placa 
+| ch             | int        | Variável auxiliar para limpeza do buffer de entrada 
+| i              | int        | Variável auxiliar utilizada na validação dos caracteres da placa 
+
+ ### Observações
+
+- Variáveis do tipo `char[]` são utilizadas para armazenar textos (strings)
+- Variáveis do tipo `int` são utilizadas para valores inteiros
+- Variáveis do tipo `double` são utilizadas para cálculos com casas decimais
+- O tipo `size_t` é utilizado para representar tamanhos de forma segura
+- Ponteiros (`char*`) são utilizados para manipulação de strings
+
+##  Como compilar e executar
+
+Para compilar e executar o programa em linguagem C, é necessário ter um compilador instalado, como o GCC.
+
+###  Compilação
+
+No terminal (ou prompt de comando), navegue até a pasta onde está o arquivo `estacionamento.exe` e execute:
+
+```bash
+gcc estacionamento.c -o estacionamento
