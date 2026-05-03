@@ -40,23 +40,24 @@ PROCESSAMENTO:<br>
 - calcular tempo de permanência : tempo = saída - entrada 
 - ajustar para tempo mínimo, se necessário 
 - valor base:<br>
-até 1hr - valor fixo <br>
-até 2hrs - valor intermediário<br>
-acima de 2hrs - adicionar valor por hora extra <br>
+  - até 1hr - valor fixo <br>
+  - até 2hrs - valor intermediário<br>
+  - acima de 2hrs - adicionar valor por hora extra <br>
 - regras adicionais:<br>
-aplicar desconto, se o veiculo possuir <br>
-aplicar acréscimos ou multas, se necessário <br>
-ajustar valor conforme o tipo de veiculo <br>
+  - aplicar desconto, se o veiculo possuir <br>
+  - aplicar acréscimos ou multas, se necessário <br>
+  - ajustar valor conforme o tipo de veiculo <br>
 - verificar forma de pagamento 
 - confirmar se o pagamento foi realizado 
 
 SAIDA:
-- exibir placa do veiculo 
-- exibir tempo de permanência
-- exibir valor total a pagar
-- informar status do pagamento
-- encerrar sistema 
-
+- Placa do veículo
+- Tipo do veículo
+- Tempo de permanência
+- Valor base
+- Desconto aplicado
+- Multas/taxas
+- Valor final a pagar
 
 ##  Variáveis utilizadas
 
@@ -89,11 +90,40 @@ O programa utiliza as seguintes variáveis para armazenar e processar as informa
 
 ##  Como compilar e executar
 
-Para compilar e executar o programa em linguagem C, é necessário ter um compilador instalado, como o GCC.
+O programa pode ser executado diretamente em um compilador online, sem necessidade de instalação.
 
-###  Compilação
+### Passos para execução
 
-No terminal (ou prompt de comando), navegue até a pasta onde está o arquivo `estacionamento.exe` e execute:
+1. Acesse um compilador online, como:
+- https://www.online-ide.com/#google_vignette
+2. Crie um novo projeto em linguagem **C**
+3. Copie e cole o código do arquivo `estacionamento.exe` no editor
+4. Clique no botão **Run / Execute**
+5. Insira os dados solicitados pelo programa no console
 
-```bash
-gcc estacionamento.c -o estacionamento
+ENTRADA ESPERADA:
+
+O programa vai solicitar informações como:
+
+- Placa do veículo (7 caracteres)
+- Tipo do veículo:
+  - 1 - Carro  
+  - 2 - Moto  
+  - 3 - Caminhonete  
+- Tempo de permanência (em horas)
+
+SAIDA :
+
+O sistema exibirá um recibo contendo:
+
+- Placa do veículo
+- Tipo do veículo
+- Tempo de permanência
+- Valor base
+- Desconto aplicado
+- Multas/taxas
+- Valor final a pagar
+
+### Observação
+
+O programa foi desenvolvido em linguagem C padrão e pode ser executado em qualquer compilador online compatível.
