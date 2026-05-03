@@ -39,13 +39,31 @@ PROCESSAMENTO:<br>
 - verificar se os horários são validos 
 - calcular tempo de permanência : tempo = saída - entrada 
 - ajustar para tempo mínimo, se necessário 
-- valor base:<br>
-  - até 1hr - valor fixo <br>
-  - até 2hrs - valor intermediário<br>
-  - acima de 2hrs - adicionar valor por hora extra <br>
-- regras adicionais:<br>
-  - aplicar desconto, se o veiculo possuir <br>
-  - aplicar acréscimos ou multas, se necessário <br>
+- Valor base
+ 	O valor é calculado com base no tempo de permanência e no tipo de veículo.
+- **Até 1 hora:**
+  - Cobrança mínima (valor fixo de 1 hora)
+    - Carro: R$ 5,00  
+    - Moto: R$ 3,00  
+    - Caminhonete: R$ 8,00  
+- **Acima de 5 hora:**
+  - O valor é calculado proporcionalmente ao número de horas:
+    valor_base = preco_hora × horas_cobradas
+- Preço por hora
+	- Carro: R$ 5,00/h  
+	- Moto: R$ 3,00/h  
+	- Caminhonete: R$ 8,00/h  
+
+- Regras adicionais
+
+- **Desconto:**
+  - Aplicado quando o tempo de permanência for maior que 5 horas
+  - Valor do desconto: 10% do valor base
+
+- **Multa:**
+  - Aplicada quando o tempo de permanência for maior que 10 horas
+  - Valor fixo: R$ 20,00
+
   - ajustar valor conforme o tipo de veiculo <br>
 - verificar forma de pagamento 
 - confirmar se o pagamento foi realizado 
